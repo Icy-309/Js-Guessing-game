@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="heading"> Guess a number from 1 - 100 </h2>
+  <input type="text" name="" class="textinput" placeholder = "Guess a number" id="">
+  <button  class="submit" type="submit">Sumbit Guess</button>
+    
+  
+    <script>
+      //A Number guessing Game //
+        const headingText = document.querySelector(".heading")
+        const inputText = document.querySelector(".textinput");
+        const submitText = document.querySelector(".submit");
+        const inputValue = inputText.value;
+        let attempt = 0; 
+        
+
+           submitText.onclick = function guessNumber(n){
+            // elements from the DOM//
+            const headingText = document.querySelector(".heading")
+            const inputText = document.querySelector(".textinput");
+            const inputValue = inputText.value;
+            headingText.innerHTML = inputValue;
+            let guessNumber = "22";
+            let attempt = 0; 
+             attempt++; 
+           // no loop  was needed // Just if and Else - if and else/
+           if( guessNumber > inputValue){
+              headingText.innerHTML = "Go higher";
+              alert("Try a higher number");
+             
+              
+           }else if(inputValue > guessNumber ){
+            headingText.innerHTML = "Go lower"; 
+            alert("Try a lower number");
+              
+           }else{
+              headingText.innerHTML = "Correct";
+              alert(`Congratulations   you guessed the number ${guessNumber} in ${attempt} attempts`);
+             
+           }
+          
+            
+           }
+          
+          
+        
+
+      
+
+
+
+        
+
+        </script>
+</body>
+
+</html>
